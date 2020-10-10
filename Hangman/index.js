@@ -61,18 +61,20 @@ function enter(e)
     
     console.log(e.key);
         if(SPc.indexOf(e.key)==-1   ){
-            if(answer[random].indexOf(e.key.toUpperCase()) != -1)
-            {
+            if(answer[random].indexOf(e.key.toUpperCase()) != -1){
                 for(var t=0; t< answer[random].length; t++)
-            {
-                if(e.key.toUpperCase() == selectedA[t])
-                    {
-                        space[t]= e.key.toUpperCase();
-                                document.getElementById("dash").innerHTML = space.join(" ");
-                                    win+=1;
-                        
-                    }
-
+                {   
+                    if(e.key.toUpperCase() == selectedA[t])
+                        {
+                            space[t]= e.key.toUpperCase();
+                                    document.getElementById("dash").innerHTML = space.join(" ");
+                                        win+=1;
+                                        if(win == selectedA.length-1)	
+                                        {
+                                            document.getElementById("category").innerHTML = "Congratulations, YOU WON. Refresh to start again.";	
+                                        }
+                        }
+                }
             }
         }
         else
