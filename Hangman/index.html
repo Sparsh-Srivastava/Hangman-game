@@ -5,40 +5,13 @@
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="icon" href="image/favicon.ico">
+
     </head> 
-    <body> 
+    <body onkeyup="enter(event)"> 
         <div id="bag">
             <center><h1>HANGMAN</h1></center><hr>
-            <h3>Use the alphabet below to guess the word, or click hint to get a clue.</h3>
+            <h3>Press the alphabet on the keyboard to guess the word, or click hint to get a clue.</h3>
             <div class="wrapper">
-            <div id="keyboard">
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">A</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">B</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">C</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">D</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">E</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">F</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">G</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">H</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">I</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">J</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">K</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">L</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">M</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">N</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">O</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">P</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">Q</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">R</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">S</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">T</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">U</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">V</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">W</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">X</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">Y</button>
-                <button class="btn btn-lg btn-warning key" onclick="enter(this); this.onclick = null; this.setAttribute('style', 'background-color: #ebecf1');">Z</button>
-                </div>
             <div id="category">The category is Chelsea Football.</div>
             <div id="question">This is where the question goes.</div>
             <div id="hint">This is the, u guessed it hint.</div>
@@ -51,8 +24,9 @@
             height = "200" style = "border:dashed 2px #fff"> 
         </canvas>
             </div>
-        <script src="index.js"></script>
         </div>
+        <script src="index.js"></script>
+
     </body> 
 </html>   
 
