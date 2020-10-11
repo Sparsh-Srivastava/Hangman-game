@@ -32,19 +32,8 @@ h1,h3
     padding-top: 10px;
 }
 
-h1
-{
-    border: solid 1px #fff;
-    margin: 0 auto;
-    width: 250px;
-    padding: 10px;
-    border-radius: 15px;
-}
-
 h1:hover
 {
-    background-color: #fff;
-    color: #6f4a8e;
     cursor:pointer;
 }
 

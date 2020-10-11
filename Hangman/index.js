@@ -21,7 +21,7 @@ var space= [];
 var wrong= [];
 
 var SPc=['Tab','Control','Shift','Meta','Alt','Enter','Backspace',']','[',';',"'",'"',',','.','/'];
-
+var repeat=[];
 var totalMistakes = 7;
 
 line();
@@ -60,7 +60,8 @@ function enter(e)
 {
     
     console.log(e.key);
-        if(SPc.indexOf(e.key)==-1   ){
+        if(SPc.indexOf(e.key)==-1&&repeat.indexOf(e.key.toUpperCase())==-1){
+            repeat.push(e.key.toUpperCase());
             if(answer[random].indexOf(e.key.toUpperCase()) != -1){
                 for(var t=0; t< answer[random].length; t++)
                 {   
@@ -75,33 +76,30 @@ function enter(e)
                                         }
                         }
                 }
+            } else
+            {
+                    console.log("wrong");
+                    lives +=1;
+                    console.log(lives);
+                    switch(lives){
+                        case 1: line4();
+                            break;
+                        case 2: line5();
+                            break;
+                        case 3: line6();
+                            break;
+                        case 4: line7();
+                            break;
+                        case 5: line8();
+                            break;
+                        case 6: line9();
+                            break;
+                        case 7: line10();
+                    }
             }
         }
-        else
-            {
-                console.log("wrong");
-                lives +=1;
-                console.log(lives);
-                switch(lives){
-        case 1: line4();
-            break;
-        case 2: line5();
-            break;
-        case 3: line6();
-            break;
-        case 4: line7();
-            break;
-        case 5: line8();
-            break;
-        case 6: line9();
-            break;
-        case 7: line10();
+       
     }
-            }
-    }
-
-}
-
 function line()
 {
 var canvas = document.getElementById("anim");
@@ -197,4 +195,3 @@ ctx.strokeStyle = "#900d0d";
 document.getElementById("category").innerHTML = "Better luck next time, Refresh to try again";
     console.log(win);
 }
-    
