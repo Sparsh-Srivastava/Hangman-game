@@ -13,14 +13,14 @@ var selectedA = answer[random]; //Selected answer
 var category = "Football"; //Choose category
 
 var lives= 0;
-
+var live = 7;
 var win=0;
 
 var space= [];
 
 var wrong= [];
 
-var SPc=['Tab','Control','Shift','Meta','Alt','Enter','Backspace',']','[',';',"'",'"',',','.','/'];
+var SPc=['Tab','Control','Shift','Meta','Alt','Enter','Backspace',']','[',';',"'",'"',',','.','/','1','2','3','4','5','6','7','8','9','0'];
 var repeat=[];
 var totalMistakes = 7;
 
@@ -76,8 +76,15 @@ function enter(e)
                                         }
                         }
                 }
-            } else
-            {
+            }else{
+                    wrong.push(e.key);
+                    var s="Wrong Alphabets: ";
+                    wrong.forEach(function(item){
+                        s+=item.toUpperCase()+" ";
+                    });
+                    document.getElementById('wrongAlpha').innerText=s;
+                    live-=1;
+                    document.getElementById('lives').innerText="Lives : "+live;
                     console.log("wrong");
                     lives +=1;
                     console.log(lives);
@@ -97,6 +104,8 @@ function enter(e)
                         case 7: line10();
                     }
             }
+        }else if(repeat.indexOf(e.key.toUpperCase())!=1 && SPc.indexOf(e.key)==-1){
+            alert("Duplicate Entry "+e.key.toUpperCase());
         }
        
     }
