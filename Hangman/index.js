@@ -13,7 +13,7 @@ var selectedA = answer[random]; //Selected answer
 var category = "Football"; //Choose category
 
 var lives= 0;
-
+var live = 7;
 var win=0;
 
 var space= [];
@@ -76,8 +76,15 @@ function enter(e)
                                         }
                         }
                 }
-            } else
-            {
+            }else{
+                    wrong.push(e.key);
+                    var s="Wrong Alphabets: ";
+                    wrong.forEach(function(item){
+                        s+=item.toUpperCase()+" ";
+                    });
+                    document.getElementById('wrongAlpha').innerText=s;
+                    live-=1;
+                    document.getElementById('lives').innerText="Lives : "+live;
                     console.log("wrong");
                     lives +=1;
                     console.log(lives);
