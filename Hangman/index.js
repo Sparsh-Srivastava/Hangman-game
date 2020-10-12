@@ -20,7 +20,7 @@ var space= [];
 
 var wrong= [];
 
-var SPc=['Tab','Control','Shift','Meta','Alt','Enter','Backspace',']','[',';',"'",'"',',','.','/'];
+var SPc=['Tab','Control','Shift','Meta','Alt','Enter','Backspace',']','[',';',"'",'"',',','.','/','1','2','3','4','5','6','7','8','9','0'];
 var repeat=[];
 var totalMistakes = 7;
 
@@ -97,6 +97,8 @@ function enter(e)
                         case 7: line10();
                     }
             }
+        }else if(repeat.indexOf(e.key.toUpperCase())!=1 && SPc.indexOf(e.key)==-1){
+            alert("Duplicate Entry "+e.key.toUpperCase());
         }
        
     }
