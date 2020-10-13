@@ -17,6 +17,10 @@ h1,h3
     font-size: 28px;
 }
 
+body{
+    overflow: hidden;
+}
+
 .show
 {
   display: inline;
@@ -25,8 +29,9 @@ h1,h3
 #bag
 {
     background-color: #6f4a8e;
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
+    padding-bottom: 5%;
     overflow: auto;
     color: #fff;
     z-index: 1;
@@ -40,13 +45,13 @@ h1:hover
 
 canvas
 {
-    margin-top: 20px;
+    margin-top: 20px;0
     z-index: 50;
 }
 
 #category
 {
-    margin: 30px auto;
+    margin: 15px auto;
     width: auto;
     padding: 10px;
     border-radius: 15px;
